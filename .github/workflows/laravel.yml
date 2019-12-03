@@ -15,8 +15,7 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
-    - name: Generate key
-      run: php artisan key:generate
+   
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
